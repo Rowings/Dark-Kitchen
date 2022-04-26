@@ -50,7 +50,7 @@ const foodName = [
     {
         foodName : "Weird Lunch",
         foodIMG : 'img/lunch/worstLunch.jpg',
-        price : 895,
+        price : 425,
         type : "Lunch",
         description : "Vous êtes une personne qui met un short en hiver ? Le genre de personne qui commande son BigMac sans viande ? Vous aimez l'ananas sur les pizza ? Vous gardez vos chaussettes pendant l'amour ? Ce plat est fait pour vous."
     },
@@ -59,10 +59,34 @@ const foodName = [
         foodIMG : 'img/dinner/baconOreo.jpg',
         price : 389,
         type : "Dinner",
-        description : "Le meilleurs des deux mondes reunis pour votre plus grand plaisir" 
+        description : "Le meilleurs des deux mondes reunis pour votre plus grand plaisir ou votre plus grand malheur..." 
     },
     {
-
+        foodName : "Cream Chips",
+        foodIMG : 'img/dinner/creamChips.jpg',
+        price : 895,
+        type : "Dinner",
+        description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
     }
-
+    {
+        foodName : "Honey Pizza",
+        foodIMG : 'img/dinner/honneyCheese.jpg',
+        price : 658,
+        type : "Dinner",
+        description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
+    }
+    {
+        foodName : "Banana Water",
+        foodIMG : 'img/drink/bananaWater.jpg',
+        price : 128,
+        type : "Drink",
+        description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
+    }
+    {
+        foodName : "Pickles Granita",
+        foodIMG : 'img/drink/pickleGranita.jpg',
+        price : 194,
+        type : "Drink",
+        description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
+    }
 ]
