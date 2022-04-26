@@ -1,7 +1,9 @@
-const foodName = [
+
+
+const menu = [
     {
         foodName : "Avocado Coffee",
-        foodIMG : 'img/avocadoCoffee.jpg',
+        foodIMG : 'img/breakfast/avocadoCoffee.jpg',
         price : 250,
         type : "Breakfast",
         description : "La douceur de l'avocat accompagné de l'amertume du café vous offrira une expérience innoubliable de dégout"
@@ -17,12 +19,12 @@ const foodName = [
     },
     {
         foodName : "Saussage Waffle",
-        foodIMG : 'img/breakfast/eggPizza.jpg',
+        foodIMG : 'img/breakfast/saussageWaffle.jpg',
         price : 150,
         type : "Breakfast",
         description : "Une envie de protéine ? Mais vous refusez d'abandonner votre plat préféré ? Pas de soucis ! Nous avons créer pour vous après plus de 5 ans de R&D la 'Egg Pizza' un massacre culinaire"
 
-    }
+    },
     {
         foodName : "Choco Bacon",
         foodIMG : 'img/breakfast/chocoBacon.jpg',
@@ -67,21 +69,21 @@ const foodName = [
         price : 895,
         type : "Dinner",
         description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
-    }
+    },
     {
         foodName : "Honey Pizza",
         foodIMG : 'img/dinner/honneyCheese.jpg',
         price : 658,
         type : "Dinner",
         description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
-    }
+    },
     {
         foodName : "Banana Water",
         foodIMG : 'img/drink/bananaWater.jpg',
         price : 128,
         type : "Drink",
         description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
-    }
+    },
     {
         foodName : "Pickles Granita",
         foodIMG : 'img/drink/pickleGranita.jpg',
@@ -90,3 +92,47 @@ const foodName = [
         description : "Oui je sais... moi aussi je trouve les chips trop sec. Un soir alors que je n'étais pas du tout alcolisée j'ai voulu prendre de la crème aigre ( sour cream ) pour accompagné mes délicieuse chips au mokka, mmalencontreusement, j'ai pris de la crème fraiche à la place. Voici l'histoire de ce met delicieux"
     }
 ]
+
+function displayMenu ()
+{
+    let main =document.querySelector("main")
+    let foodName;
+    let foodIMG;
+    let price;
+    let type;
+    let description;
+    let article;
+
+
+    for (const food  of menu) {
+        
+        foodName = document.createElement("h3");
+        foodIMG = document.createElement("img");
+        // price = document.createElement("")
+        article = document.createElement("article");
+        // type = document.createElement("")
+        description = document.createElement("p");
+        type = document.createElement("p");
+
+
+        foodName.appendChild(document.createTextNode(food.foodName));
+        description.appendChild(document.createTextNode(food.description));
+
+
+
+
+
+        article.appendChild(foodIMG);
+        article.appendChild(foodName);
+
+        document.querySelector("main").appendChild(article);
+
+        foodIMG.setAttribute("src", food.foodIMG);
+    }
+
+
+}
+
+
+
+    displayMenu();
