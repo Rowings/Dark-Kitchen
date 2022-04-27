@@ -107,6 +107,7 @@ function displayMenu ()
     for (const food  of menu) {
         
         foodName = document.createElement("h3");
+        foodName.className = "foodName"
         foodIMG = document.createElement("img");
         // price = document.createElement("")
         article = document.createElement("article");
