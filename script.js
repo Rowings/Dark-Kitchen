@@ -125,33 +125,3 @@ function displayMenu ()
         buttons.textContent = "Ajouter au panier";
         buttons.className = "buttons";
         
-        
-
-
-        price.appendChild(document.createTextNode(food.price));
-        foodName.appendChild(document.createTextNode(food.foodName));
-        description.appendChild(document.createTextNode(food.description));
-
-
-
-        article.appendChild(foodIMG);
-
-        
-        article.appendChild(foodName);
-        article.appendChild(description)
-        article.appendChild(price);
-        article.appendChild(buttons);
-        
-        
-
-        document.querySelector("main").appendChild(article);
-
-        foodIMG.setAttribute("src", food.foodIMG);
-    }
-
-
-}
-
-
-
-    displayMenu();

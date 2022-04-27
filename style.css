@@ -1,30 +1,107 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
 
+ @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
 html {
     background-color: #f9c9a7;
     background-image: linear-gradient(309deg, #f9c9a7 0%, #F7CE68 100%);
-
+    background-image: url(img/background.jpeg);
+    background-repeat:unset;
 }
 
 h1 {
+
     position: absolute;
     width: 15vw;
     font-family: 'Luckiest Guy', cursive;
-    font-family: 'Knewave', cursive;
 
+    
+    width: 500px;
+     font-family: 'Luckiest Guy', cursive;
+
+    font-family: 'Knewave', cursive;
+    margin: 0 auto;
+    color: white;
+    border: 5px solid rgb(255, 255, 255);
+    padding: 20px;
+    background-color: black;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 35px;
 }
 
 .weird  {
     font-family: 'Creepster', cursive;
-    color: black;
+    color: rgb(255, 255, 255);
     letter-spacing: 2px;
 }
 
 h3 {
     font-size: 50px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
+.dropdown {
+    margin-left: 1250px;
+    margin-top: -70px;
+    color: white;
+    width: 100px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 1px;
+    background-color: black;
+    border-radius: 1000px;
+    text-align: center;
+}
+
+.dropdown:hover > #cart-dropdown{
+    display: block;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: x-large;
+    border: 3px solid black;
+    border-radius: 200px;
+    background-color: beige;
+    padding: 50px;
+    padding-top: 0;
+}
+img {
+    width: 60%;
+    border: 3px solid black;
+    box-shadow: 0 20px 20px black ;
+    border-radius: 900px;
+    margin-top: 50px;
+
+}
+
+.price {
+    font-size:x-large;
+}
+
+.buttons {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.foodName {
+    font-family: fantasy;
+}
+
+
+.buttons:hover {
+    cursor: pointer;
+}
 
