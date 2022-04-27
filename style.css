@@ -1,12 +1,13 @@
- @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
 html {
     background-color: #f9c9a7;
     background-image: linear-gradient(309deg, #f9c9a7 0%, #F7CE68 100%);
-    background-image: url(img/background.jpeg);
-    background-repeat:unset;
+    /* background-image: url(img/background.jpeg);
+    background-repeat:unset; */
+
 }
 
 h1 {

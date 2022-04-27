@@ -145,6 +145,8 @@ function displayMenu ()
         document.querySelector("main").appendChild(article);
 
         foodIMG.setAttribute("src", food.foodIMG);
+
+        
     }
 
 
