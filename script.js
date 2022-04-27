@@ -93,6 +93,9 @@ const menu = [
     }
 ]
 
+
+
+
 function displayMenu ()
 {
     let main =document.querySelector("main")
@@ -119,10 +122,11 @@ function displayMenu ()
         price.className = "price";
         
 
-
+        
         const buttons = document.createElement("button");
         buttons.textContent = "Ajouter au panier";
         buttons.className = "buttons";
+        
         
 
 
@@ -149,11 +153,55 @@ function displayMenu ()
 
 
 }
-
-
-
     displayMenu();
 
 
 
+
+
+
+
+
+
+// PANIER 2.0//
+
+    
+  
+   
+    
+    
+  
+ function remplirCatalogue() {
+          let cat= document.getElementById('cat');
+        for (let i in menu) {
+            let e= document.createElement("option");
+            e.value=i;
+              let txt= document.createTextNode(menu[i].Plat);
+              e.appendChild(txt);
+            cat.appendChild(e);
+        }
+    }
+  
+ 
+  function calculerTotal() {
+    let tot= 0;
+    for (let p in menu) {
+        tot+= menu[p].prix;
+    }
+    return tot;
+  }
+  
+  function ajouter() {
+          let cat= document.getElementById('cat');
+        let sel= cat.options[cat.selectedIndex].value;
+        let prod= menu[sel];
+        panier.push(prod);
+        let ligne= document.createElement("tr");
+          ajouterCase(ligne,prod.Plat);
+          ajouterCase(ligne,prod.prix);
+        document.getElementById("pan").appendChild(ligne);
+        document.getElementById("tot").innerHTML= calculerTotal();
+  }
+    
+remplirCatalogue();
 

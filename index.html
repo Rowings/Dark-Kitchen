@@ -10,24 +10,42 @@
 </head>
 <body>
     <header class="header">
-    <h1 id="logo">FAST & <em class="weird">WEIRD</em></h1>
+
+        <h1 id="logo">FAST & <em class="weird">WEIRD</em></h1>
+
+    <!-- PANIER 2.0 -->
+    <section class="basket">
+        <select id="cat" multiple>
+        </select>
+        
+        <button onclick="ajouter();">Ajouter</button>
+        
+        <table id="pan">
+          <tr><th>Plat</th><th>Prix</th></tr>
+        </table>
+        
+        <p>Total <span id="tot">0</span></p>
+    </section>
+
+
+    
 
 
 
     <div class="dropdown">
         <div id="cart">
-            <p><span id="in-cart-items-num">0</span> Articles</p>
+            <p><span id="itemNum">0</span> Articles</p>
         </div>
     
         <ul id="cart-dropdown" hidden>
             <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
-            <li class="go-to-cart hidden"><a href="/panier/">Voir le panier</a></li>
+            <li class="go-to-cart hidden"><a href="panier.html">Voir le panier</a></li>
         </ul>
     </div>
 
 
 
-<nav>
+<!--<nav>
     <ul class="menuNav">
         <li class="elementNav">Menu</li>
         <li class="elementNav">Breakfast</li>
@@ -35,25 +53,13 @@
         <li class="elementNav">Dinner</li>
         <li class="elementNav">Cart</li>
     </ul>
-</nav>
+</nav>-->
     </header>
 
     <main>
       
-        <!--   PAGE PANIER
-
-        <table class="table">
-            <thead>
-                <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
-            </thead>
-            <tbody id="cart-tablebody"></tbody>
-        </table>
+       
         
-        <p>Sous total : <span class="subtotal"></span>€</p>
-        
-        <button id="confirm-command">Passer la commande</button>
-    -->
-
     </main>
 
     
