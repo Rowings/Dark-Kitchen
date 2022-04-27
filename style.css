@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
@@ -11,7 +11,7 @@ html {
 h1 {
     position: absolute;
     width: 15vw;
-    /* font-family: 'Luckiest Guy', cursive; */
+    font-family: 'Luckiest Guy', cursive;
     font-family: 'Knewave', cursive;
 
 }
@@ -27,4 +27,4 @@ h3 {
     color: black;
 }
 
- */
+
