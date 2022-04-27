@@ -1,5 +1,3 @@
-
-
 const menu = [
     {
         foodName : "Avocado Coffee",
@@ -93,6 +91,9 @@ const menu = [
     }
 ]
 
+
+
+
 function displayMenu ()
 {
     let main =document.querySelector("main")
@@ -123,6 +124,7 @@ function displayMenu ()
         const buttons = document.createElement("button");
         buttons.textContent = "Ajouter au panier";
         buttons.className = "buttons";
+        
         
 
 
