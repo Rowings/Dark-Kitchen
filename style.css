@@ -1,18 +1,31 @@
- @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
 html {
     background-color: #f9c9a7;
     background-image: linear-gradient(309deg, #f9c9a7 0%, #F7CE68 100%);
-    background-image: url(img/background.jpeg);
-    background-repeat:unset;
+    /* background-image: url(img/background.jpeg);
+    background-repeat:unset; */
+
 }
 
 h1 {
+
+    position: absolute;
+    width: 15vw;
+    font-family: 'Luckiest Guy', cursive;
+
     
     width: 500px;
      font-family: 'Luckiest Guy', cursive;
+
     font-family: 'Knewave', cursive;
     margin: 0 auto;
     color: white;
@@ -93,6 +106,7 @@ img {
 .foodName {
     font-family: fantasy;
 }
+
 
 .buttons:hover {
     cursor: pointer;
