@@ -96,7 +96,7 @@ const menu = [
 
 function displayMenu ()
 {
-    let main =document.querySelector("main")
+    let section =document.querySelector("main")
     let foodName;
     let foodIMG;
     let price;
@@ -106,7 +106,6 @@ function displayMenu ()
 
 
     for (const food  of menu) {
-        
         foodName = document.createElement("h3");
         foodName.className = "foodName"
         foodIMG = document.createElement("img");
@@ -144,8 +143,10 @@ function displayMenu ()
         article.appendChild(buttons);
         
         
-
+        
+        document.querySelector(" ").appendChild(main)
         document.querySelector("main").appendChild(article);
+        
 
         foodIMG.setAttribute("src", food.foodIMG);
     }
