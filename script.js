@@ -110,6 +110,7 @@ function displayMenu ()
         foodName = document.createElement("h3");
         foodName.className = "foodName"
         foodIMG = document.createElement("img");
+        foodIMG.className ="bouffe"
         // price = document.createElement("")
         article = document.createElement("article");
         // type = document.createElement("")
@@ -149,7 +150,7 @@ function displayMenu ()
         foodIMG.setAttribute("src", food.foodIMG);
     }
 
-
+    
 }
 
 

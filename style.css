@@ -2,36 +2,93 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
 html {
     
     /* background-image: url(img/background.jpeg); */
     background-repeat:no-repeat;
-    background-color: #0093E9;
-background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-
     background-size: contain;
+    background-color: #cfb59a;
+    background-image: linear-gradient(131deg, #cfb59a 0%, #a26f46 100%);
 }
 
-h1 {
-    
-    width: 500px;
-    font-family: 'Luckiest Guy', cursive;
-    font-family: 'Knewave', cursive;
-    margin: 0 auto;
-    color: white;
-    border: 5px solid rgb(255, 255, 255);
-    padding: 20px;
-    background-color: black;
+  
+li, a, button {
+    font-family: "Montserrrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 10%;
+      background-color: #24252a;
+  }
+
+  .logo {
+      cursor:pointer;
+      
+  }
+
+  .menuNav {
+      list-style: none;
+
+  }
+  .menuNav, li {
+      display: inline-block;
+      padding: 0px 20px;
+  }
+  .menuNav li a {
+      transition: all 0.3s ease 0s;
+  }
+
+  .menuNav li a:hover {
+    color : #0088a9
+}
+.contact {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1 );
+    border: none;
     border-radius: 50px;
-    text-align: center;
-    margin-top: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
-.weird  {
-    font-family: 'Creepster', cursive;
-    color: rgb(255, 255, 255);
-    letter-spacing: 2px;
+.contact:hover {
+    background-color: rgba(0,136,169,0.8);
 }
+
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    width: 70%;
+  }
+
+  .figureOne {
+      border-radius: 4px;
+      transition: box-shadow .5s transform.25s;
+      background-color: 
+  }
+  
+  .figureOne:hover {
+      box-shadow: 5px 3px rgba(255, 255, 255, 05), 10px 6px rgba(255, 255, 255, 04), 15px 9px rgba(255, 255, 255, 03);
+      transform: rotate(20deg)
+      skew(-10deg, -5deg);
+      transition: box-shadow .75s, transform .375s;
+  }
 
 h3 {
     font-size: 50px;
@@ -56,7 +113,7 @@ h3 {
 }
 
 article {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -70,13 +127,13 @@ article {
     border-radius: 200px;
     background-color: beige;
     padding: 50px;
-    padding-top: 0;
+    padding-top: 0; */
 }
-img {
-    width: 60%;
+.bouffe {
+    width: 20%;
     border: 3px solid black;
     box-shadow: 0 20px 20px black ;
-    border-radius: 900px;
+    border-radius: 2vw;
     margin-top: 50px;
 
 }
@@ -110,3 +167,11 @@ img {
     margin: auto;
     margin-top: 100px;
 }
+
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
