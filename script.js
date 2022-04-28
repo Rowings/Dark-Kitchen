@@ -171,52 +171,50 @@ function Produit(id, foodName, price) {
   
   
  function remplirCatalogue() {
-          let cat= document.getElementById('cat');
+          let list= document.getElementById('list');
         for (let food of menu) {
             let e= document.createElement("option");
             e.value=food.price;
               let txt= document.createTextNode(food.foodName);
               e.appendChild(txt);
-            cat.appendChild(e);
+            list.appendChild(e);
             
         }
 
     }
+
+    
   
     function ajouterCase(parent, txt) {
-        var e= document.createElement("td");
+        var e = document.createElement("td");
         e.appendChild(document.createTextNode(txt));
         parent.appendChild(e);
       }
 
-      const panier = []
+     
+ const panier = []
 
- 
-
-  
+ function calculerTotal() {
+    let tot= 0;
+    for (let p in panier) {
+        tot+= panier[p].price;
+    }
+    return tot;
+  }
   
   function ajouter() {
       
-          let cat= document.getElementById('cat');
+        let list= document.getElementById('list');
 
-        let sel= cat.options[cat.selectedIndex].value;
-        let prod= menu[sel];
-        panier.push(prod);
+        let choix= list.options[list.selectedIndex];
+        
         let ligne= document.createElement("tr");
-          ajouterCase(ligne,menu.foodName);
-          ajouterCase(ligne,menu.price);
+        ajouterCase(ligne,choix.innerText); 
+        ajouterCase(ligne,choix.value);
+         
         document.getElementById("pan").appendChild(ligne);
         document.getElementById("tot").innerHTML= calculerTotal();
 
-  }
-
-  
-  function calculerTotal() {
-    let tot= 0;
-    for (let p in panier) {
-        tot+= panier.price;
-    }
-    return tot;
   }
     
 remplirCatalogue();
