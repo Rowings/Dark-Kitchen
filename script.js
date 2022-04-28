@@ -157,5 +157,68 @@ function displayMenu ()
     displayMenu();
 
 
+// JS PANIER 2.0//
+
+
+function Produit(id, foodName, price) {
+    this.id= id;
+    this.price= price;
+    this.foodName= foodName;
+    this.toString= function() {
+      return this.foodName + " "+ price;
+    }
+}
+  
+  
+ function remplirCatalogue() {
+          let cat= document.getElementById('cat');
+        for (let food of menu) {
+            let e= document.createElement("option");
+            e.value=food.price;
+              let txt= document.createTextNode(food.foodName);
+              e.appendChild(txt);
+            cat.appendChild(e);
+            
+        }
+
+    }
+  
+    function ajouterCase(parent, txt) {
+        var e= document.createElement("td");
+        e.appendChild(document.createTextNode(txt));
+        parent.appendChild(e);
+      }
+
+      const panier = []
+
+ 
+
+  
+  
+  function ajouter() {
+      
+          let cat= document.getElementById('cat');
+
+        let sel= cat.options[cat.selectedIndex].value;
+        let prod= menu[sel];
+        panier.push(prod);
+        let ligne= document.createElement("tr");
+          ajouterCase(ligne,menu.foodName);
+          ajouterCase(ligne,menu.price);
+        document.getElementById("pan").appendChild(ligne);
+        document.getElementById("tot").innerHTML= calculerTotal();
+
+  }
+
+  
+  function calculerTotal() {
+    let tot= 0;
+    for (let p in panier) {
+        tot+= panier.price;
+    }
+    return tot;
+  }
+    
+remplirCatalogue();
 
 
