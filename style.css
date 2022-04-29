@@ -198,9 +198,10 @@ background-position: 0% 50%;
 }
 }
 .basket {
-width: 135px;
+width: 140px;
 position: relative; 
 background-color: rgb(0, 0, 0);
+margin: 0 auto;
 padding: 10px;
 color: white;
 border: 2px solid rgb(255, 255, 255);
@@ -227,4 +228,13 @@ color: white;
 background-color: green;
 padding: 5px;
 border-radius: 10px;
+}
+th, td {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    margin:5px;
+}
+td {
+    color: rgb(0, 255, 0);
 }
