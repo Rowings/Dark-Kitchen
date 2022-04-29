@@ -92,11 +92,14 @@ const menu = [
 ]
 
 
-
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("darkMode");
+  }
 
 function displayMenu ()
 {
-    let section =document.querySelector("main")
+    let main =document.querySelector("main")
     let foodName;
     let foodIMG;
     let price;
@@ -110,9 +113,7 @@ function displayMenu ()
         foodName.className = "foodName"
         foodIMG = document.createElement("img");
         foodIMG.className ="bouffe"
-        // price = document.createElement("")
         article = document.createElement("article");
-        // type = document.createElement("")
         description = document.createElement("p");
         description.className = "description";
         type = document.createElement("p");
@@ -144,7 +145,7 @@ function displayMenu ()
         
         
         
-        document.querySelector(" ").appendChild(main)
+      
         document.querySelector("main").appendChild(article);
         
 
