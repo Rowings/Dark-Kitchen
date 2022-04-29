@@ -14,14 +14,11 @@
         <img class="logo" src="img/logo.svg" alt="logo">
     <nav>
         <ul class="menuNav">
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Breakfast</a></li>
-            <li><a href="#">Lunch</a></li>
-            <li><a href="#">Dinner</a></li>
-            <li><button onclick="darkMode()">Dark Mode</button></li>
+            
+            <li><button class="darkModeButton" onclick="darkMode()">Dark Mode</button></li>
         </ul>
     </nav>
-        <i class="cta" href="=#"><button class="contact">Contact</button></>
+        <i class="cta" href="=#"><button class="contact">Contact</button>
        
             
         
@@ -33,8 +30,16 @@
     <source src="video/videoAccueil.mp4" type="video/mp4">
 </video>
 
-</div>
+</div>  <div class="titreMenu">
         <h2>Notre menu</h2>
+        </div>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Menu</button>
+            <button class="btn" onclick="filterSelection('breakfast')"> Breakfast</button>
+            <button class="btn" onclick="filterSelection('lunch')">Lunch </button>
+            <button class="btn" onclick="filterSelection('dinner')"> Dinner</button>
+            <button class="btn" onclick="filterSelection('drink')"> Drink</button>
+          </div>
     <main>
     
 

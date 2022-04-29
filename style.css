@@ -14,7 +14,7 @@ html {
     /* background-image: url(img/background.jpeg); */
     background-repeat:no-repeat;
     background-size: contain;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #db9a87, #6b57b3, #7d9eaa, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
@@ -35,13 +35,27 @@ main
     color: white
 }
 
+.titreMenu {
+    display: flex;
+    justify-content: center;
+}
+#myBtnContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
 h2 {
+    
     background-color: #0088a9;
     border-radius: 20px;
     font-family: Montserrat;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 20px;
+    
 }
 
   
@@ -162,8 +176,13 @@ article
     border-radius: 20px;
 }
 
-button {
+.darkModeButton {
     background-color: black;
+}
+.btn {
+    background-color: rgb(175, 120, 242);
+    padding: 2px;
+
 }
 .foodName {
     font-family: fantasy;
@@ -181,19 +200,6 @@ button {
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-    @keyframes gradient {
         0% {
             background-position: 0% 50%;
         }
