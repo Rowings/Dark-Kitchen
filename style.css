@@ -2,108 +2,229 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding:0;
+}
 html {
-    background-color: #f9c9a7;
-    background-image: linear-gradient(309deg, #f9c9a7 0%, #F7CE68 100%);
-    background-image: url(img/background.jpeg);
-    background-repeat:unset;
+/* background-image: url(img/background.jpeg); */
+background-repeat:no-repeat;
+background-size: contain;
+background: linear-gradient(-45deg, #db9a87, #6b57b3, #7d9eaa, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+height: 100vh;
+/* background: linear-gradient(-45deg, #ea6b44, #daea72, #56c3a1, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite; */
+
+}
+main
+{ 
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
-h1 {
-    
-    width: 500px;
-     font-family: 'Luckiest Guy', cursive;
-    font-family: 'Knewave', cursive;
-    margin: 0 auto;
-    color: white;
-    border: 5px solid rgb(255, 255, 255);
-    padding: 20px;
-    background-color: black;
-    border-radius: 50px;
-    text-align: center;
-    margin-top: 35px;
+.darkMode {
+background-color: black;
+color: white
 }
 
-.weird  {
-    font-family: 'Creepster', cursive;
-    color: rgb(255, 255, 255);
-    letter-spacing: 2px;
+.titreMenu {
+display: flex;
+justify-content: center;
+}
+#myBtnContainer {
+display: flex;
+justify-content: center;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+h2 {
+background-color: #0088a9;
+border-radius: 20px;
+font-family: Montserrat;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+font-size: 20px;
+}
+
+li, a, button {
+font-family: "Montserrrat", sans-serif;
+font-weight: 500;
+font-size: 16px;
+color: #edf0f1;
+text-decoration: none;
+}
+
+/* tout ceci est la partie du haut */
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 10%;
+background-color: rgba(0, 0, 0, 0.50);
+}
+
+.logo {
+cursor:pointer;
+}
+
+.menuNav {
+list-style: none;
+
+}
+.menuNav, li {
+display: inline-block;
+padding: 0px 20px;
+}
+.menuNav li a {
+transition: all 0.3s ease 0s;
+}
+
+.menuNav li a:hover {
+color : #0088a9
+}
+.contact {
+padding: 9px 25px;
+background-color: rgba(0,136,169,1 );
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+}
+
+.contact:hover {
+background-color: rgba(0,136,169,0.8);
+}
+
+video {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2vw;
+width: 70%;
+border-radius: 5px solid;
+border-image: linear-gradient(#ffe3dd, #ffb9d9, #c6d8ff) 1;
+animation: rotate 2.5s ease-in infinite;
+border-radius: 5px;
+}
+
+video:hover {
+transform: scale(0.95);
 }
 
 h3 {
-    font-size: 50px;
-    color: rgb(0, 0, 0);
+font-size: 50px;
+color: rgb(0, 0, 0);
 }
 
-.dropdown {
-    margin-left: 1100px;
-    margin-top: -70px;
-    color: white;
-    width: 200px;
-    height: 100px;
-    border: 2px solid rgb(255, 255, 255);
-    padding: 1px;
-    background-color: black;
-    border-radius: 1000px;
-    text-align: center;
+article
+{ 
+background-color: hsl(0, 22%, 58%);
+padding: 30px;
+padding-top: 10px;
+border: 5px rgba(246, 143, 0, 0.644);
+border-radius: 10px;
+min-width: 50px;
+max-width: 300px;
+margin: 10px;
 }
 
-.dropdown:hover > #cart-dropdown{
-    display: block;
+.bouffe
+{
+display: block;
+margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+border-radius: 10px;
 }
 
-article {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: x-large;
-    border: 3px solid black;
-    border-radius: 200px;
-    background-color: beige;
-    padding: 50px;
-    padding-top: 0;
+@keyframes rotate {
+50% {
+border-image: linear-gradient( 360deg,#ff512f, #dd2476, #1c64ff) 1;
 }
-img {
-    width: 60%;
-    border: 3px solid black;
-    box-shadow: 0 20px 20px black ;
-    border-radius: 900px;
-    margin-top: 50px;
-
 }
 
 .price {
-    font-size:x-large;
+font-size:x-large;
 }
 
 .buttons {
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
+background-color: blue;
+color: white;
+padding: 10px;
+border-radius: 20px;
 }
 
+.darkModeButton {
+background-color: black;
+}
+.btn {
+background-color: rgb(175, 120, 242);
+padding: 2px;
+
+}
 .foodName {
-    font-family: fantasy;
+font-family: fantasy;
 }
 
 .buttons:hover {
-    cursor: pointer;
+cursor: pointer;
 }
 
-.commande {
-    background-color: white;
-    width: 11%;
-    padding: 30px;
-    border-radius: 50px;
-    border: 3px solid black;
-    box-shadow: 0 20px 20px black;
-    margin: auto;
-    margin-top: 100px;
+@keyframes move {
+100% {
+transform: translate3d(0, 0, 1px) rotate(360deg);
+}
+}
+
+@keyframes gradient {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+.basket {
+width: 135px;
+position: relative; 
+background-color: rgb(0, 0, 0);
+padding: 10px;
+color: white;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 20px;
+box-shadow: 0 10px 10px black;
+}
+.add {
+padding: 5px;
+margin: 5px 0;
+color: white;
+background-color: rgb(52, 52, 255);
+border-radius: 10px;
+}
+#pan {
+margin: 0 auto;
+}
+#list {
+color: white;
+background-color: black;
+padding: 8px;
+}
+.command {
+color: white;
+background-color: green;
+padding: 5px;
+border-radius: 10px;
 }

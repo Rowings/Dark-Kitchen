@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Kitchen</title>
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Kitchen</title>
+<script defer src="script.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-    <h1 id="logo">FAST & <em class="weird">WEIRD</em></h1>
-
-
-
-    <div class="dropdown">
-        <div id="cart">
-            <p><span id="in-cart-items-num">0</span> Articles</p>
-        </div>
-    
-        <ul id="cart-dropdown" hidden>
-            <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
-            <li class="go-to-cart hidden"><a href="/panier/">Voir le panier</a></li>
-        </ul>
-    </div>
-
-
-
+<header>
+<img class="logo" src="img/logo.svg" alt="logo">
 <nav>
-    <ul class="menuNav">
-        <li class="elementNav">Menu</li>
-        <li class="elementNav">Breakfast</li>
-        <li class="elementNav">Lunch</li>
-        <li class="elementNav">Dinner</li>
-        <li class="elementNav">Cart</li>
-    </ul>
+<ul class="menuNav">
+<li><button class="darkModeButton" onclick="darkMode()">Dark Mode</button></li>
+</ul>
 </nav>
-    </header>
+<i class="cta" href="=#"><button class="contact">Contact</button>
+</header>
 
-    <main>
-      
-        <!--   PAGE PANIER
+<div class="content">
+<video autoplay muted loop id="myVideo">
+<source src="video/videoAccueil.mp4" type="video/mp4">
+</video>
 
-        <table class="table">
-            <thead>
-                <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
-            </thead>
-            <tbody id="cart-tablebody"></tbody>
-        </table>
-        
-        <p>Sous total : <span class="subtotal"></span>€</p>
-        
-        <button id="confirm-command">Passer la commande</button>
-    -->
+</div> <div class="titreMenu">
+<h2>Notre menu</h2>
+</div>
+<div id="myBtnContainer">
+<button class="btn active" onclick="filterSelection('all')"> Menu</button>
+<button class="btn" onclick="filterSelection('breakfast')"> Breakfast</button>
+<button class="btn" onclick="filterSelection('lunch')">Lunch </button>
+<button class="btn" onclick="filterSelection('dinner')"> Dinner</button>
+<button class="btn" onclick="filterSelection('drink')"> Drink</button>
+</div>
 
-    </main>
+<section class="basket">
+<select id="list" multiple>
+</select>
+<button class="add" onclick="ajouter();">Ajouter</button>
+<table id="pan">
+<tr><th>Plat</th><th>Prix</th></tr>
+</table>
+<p>Total :<span id="tot"></span></p>
+<button class="command" style="visibility: hidden;" onclick="miam();">Commander</button>
+</section>
+<main>
 
-    
+
+</main>
+
+
 </body>
 </html>
