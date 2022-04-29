@@ -235,6 +235,7 @@ function ajouterCase(parent, txt) {
 }
 
 
+
 // AJOUTER ARTICLES //
 function ajouter() {
 
@@ -251,6 +252,65 @@ function ajouter() {
 console.log(panier)
 }
 
+
+// Add active class to the current control button (highlight it)
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
+
+// ********** JAVASCRIPT PANIER ********** //
+ 
+
+function remplirCatalogue() {
+          let list= document.getElementById('list');
+        for (let food of menu) {
+            let e= document.createElement("option");
+            e.value=food.price;
+              let txt= document.createTextNode(food.foodName);
+              e.appendChild(txt);
+            list.appendChild(e);
+            
+        }
+
+    }
+
+    
+  
+    function ajouterCase(parent, txt) {
+        var e = document.createElement("td");
+        e.appendChild(document.createTextNode(txt));
+        parent.appendChild(e);
+      }
+      
+      
+
+  
+  // AJOUTER ARTICLES //
+  function ajouter() {
+      
+        let list= document.getElementById('list');
+
+        let choix= list.options[list.selectedIndex];
+        panier.push(choix)
+        let ligne= document.createElement("tr");
+        ajouterCase(ligne,choix.innerText); 
+        ajouterCase(ligne,choix.value);
+         
+        document.getElementById("pan").appendChild(ligne);
+        document.getElementById("tot").innerHTML= total();
+console.log(panier)
+  }
+    
 remplirCatalogue();
 
 
@@ -258,26 +318,45 @@ remplirCatalogue();
 // COMMANDER //
 
 function miam() {
+
 alert("Thanks for your command ! Buon Appetito")
+
+    alert("Thanks for your command ! Buon Appetito")
+
 }
 
 
 /*
 function commander() {
+
 let basket = document.querySelector(".basket")
 let commande = document.createElement("button")
 commande.innerHTML = "commander"
 commande.addEventListener("click", alert)
   basket.appendChild(commande)
 }
+=======
+    let basket = document.querySelector(".basket")
+    let commande = document.createElement("button")
+    commande.innerHTML = "commander"
+    commande.addEventListener("click", alert)
+        basket.appendChild(commande)
+    }
+>>>>>>> 76c9eed03192632c041cd6dcc66dfac1707d1fcd
 */
 
 
 function visible() {
+
 let command = document.querySelector(".command")
 command.style.visibility = "visible"
+
+    let command = document.querySelector(".command")
+    command.style.visibility = "visible"
+
 }
 
 let add = document.querySelector(".add")
 
 add.addEventListener("click", visible)
+
