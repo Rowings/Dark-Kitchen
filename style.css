@@ -49,9 +49,9 @@ background-color: #0088a9;
 border-radius: 20px;
 font-family: Montserrat;
 text-align: center;
-padding-top: 20px;
-padding-bottom: 20px;
+padding: 20px;
 font-size: 20px;
+margin-top: 50px;
 }
 
 li, a, button {
@@ -70,10 +70,21 @@ justify-content: space-between;
 align-items: center;
 padding: 30px 10%;
 background-color: rgba(0, 0, 0, 0.50);
+margin: 0 auto;
 }
 
 .logo {
 cursor:pointer;
+margin-left: -60px;
+}
+
+.type {
+    box-shadow: 0 10px 10px black;
+    margin-top: 50px;
+    border: 10px solid white;
+    border-style: dotted;
+    border-left-color: black;
+    border-top-color: black;
 }
 
 .menuNav {
@@ -92,7 +103,7 @@ transition: all 0.3s ease 0s;
 color : #0088a9
 }
 .contact {
-padding: 9px 25px;
+padding: 5px 15px;
 background-color: rgba(0,136,169,1 );
 border: none;
 border-radius: 50px;
@@ -110,10 +121,12 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 2vw;
 width: 70%;
-border-radius: 5px solid;
 border-image: linear-gradient(#ffe3dd, #ffb9d9, #c6d8ff) 1;
 animation: rotate 2.5s ease-in infinite;
-border-radius: 5px;
+border-radius: 500px;
+box-shadow: 0 20px 20px black;
+
+display: none;
 }
 
 video:hover {
@@ -140,11 +153,14 @@ margin: 10px;
 .bouffe
 {
 display: block;
-margin-top: 50px;
+margin-top: 25px;
+margin-bottom: 20px;
 margin-left: auto;
 margin-right: auto;
-width: 50%;
-border-radius: 10px;
+width: 75%;
+border-radius: 50px;
+border: 1px solid black;
+box-shadow: 0 5px 5px black;
 }
 
 @keyframes rotate {
@@ -155,6 +171,10 @@ border-image: linear-gradient( 360deg,#ff512f, #dd2476, #1c64ff) 1;
 
 .price {
 font-size:x-large;
+margin: 20px;
+text-align: center;
+border: 2px solid black;
+border-style: dotted;
 }
 
 .buttons {
@@ -166,10 +186,18 @@ border-radius: 20px;
 
 .darkModeButton {
 background-color: black;
+padding: 5px;
+border-radius: 5px;
+margin-left: -50px;
 }
+
+
 .btn {
 background-color: rgb(175, 120, 242);
-padding: 2px;
+padding: 5px;
+margin: 0 5px;
+border-radius: 10px;
+
 
 }
 .foodName {

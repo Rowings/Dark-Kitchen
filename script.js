@@ -119,9 +119,9 @@ const menu = [
     price = document.createElement("p");
     price.className = "price";
     
-    const buttons = document.createElement("button");
-    buttons.textContent = "Ajouter au panier";
-    buttons.className = "buttons";
+    //const buttons = document.createElement("button");
+    //buttons.textContent = "Ajouter au panier";
+    //buttons.className = "buttons";
     
     price.appendChild(document.createTextNode(food.price));
     foodName.appendChild(document.createTextNode(food.foodName));
@@ -132,7 +132,7 @@ const menu = [
     article.appendChild(foodName);
     article.appendChild(description)
     article.appendChild(price);
-    article.appendChild(buttons);
+    //article.appendChild(buttons);
     document.querySelector("main").appendChild(article);
     
     foodIMG.setAttribute("src", food.foodIMG);
