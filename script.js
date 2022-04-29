@@ -2,7 +2,7 @@ const menu = [
     {
         foodName : "Avocado Coffee",
         foodIMG : 'img/breakfast/avocadoCoffee.jpg',
-        price : "250€",
+        price : 250,
         type : "Breakfast",
         description : "La douceur de l'avocat accompagné de l'amertume du café vous offrira une expérience innoubliable de dégout"
 
