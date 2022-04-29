@@ -191,11 +191,12 @@ function displayMenu ()
         parent.appendChild(e);
       }
       
+      
 
    // TOTAL //  
  const panier = []
 
- function Total() {
+ function total() {
     let tot= 0;
     for (let i in panier) {
         tot+= panier[i].price;
@@ -215,7 +216,7 @@ function displayMenu ()
         ajouterCase(ligne,choix.value);
          
         document.getElementById("pan").appendChild(ligne);
-        document.getElementById("tot").innerHTML= Total();
+        document.getElementById("tot").innerHTML= total();
 console.log(panier)
   }
     
@@ -224,16 +225,30 @@ remplirCatalogue();
 
 
 // COMMANDER //
+
+function miam() {
+    alert("Thanks for your command ! Buon Appetito")
+}
+
+
+/*
 function commander() {
+    let basket = document.querySelector(".basket")
     let commande = document.createElement("button")
     commande.innerHTML = "commander"
-    commande.addEventListener("click", function(){
-        alert("Thanks for your command !")
+    commande.addEventListener("click", alert)
 
-        article.appendChild(commande)
-    })
+        basket.appendChild(commande)
+    }
+*/
+
+
+function visible() {
+    let command = document.querySelector(".command")
+    command.style.visibility = "visible"
 }
 
 let add = document.querySelector(".add")
 
-add.addEventListener("click", commander)
+add.addEventListener("click", visible)
+
