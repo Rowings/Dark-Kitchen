@@ -209,3 +209,94 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+
+
+// ********** JAVASCRIPT PANIER ********** //
+ 
+
+function remplirCatalogue() {
+          let list= document.getElementById('list');
+        for (let food of menu) {
+            let e= document.createElement("option");
+            e.value=food.price;
+              let txt= document.createTextNode(food.foodName);
+              e.appendChild(txt);
+            list.appendChild(e);
+            
+        }
+
+    }
+
+    
+  
+    function ajouterCase(parent, txt) {
+        var e = document.createElement("td");
+        e.appendChild(document.createTextNode(txt));
+        parent.appendChild(e);
+      }
+      
+      
+
+   // TOTAL //  
+ const panier = []
+
+ function total() {
+    let tot= 0;
+    for (let i in panier) {
+        tot+= panier[i].price;
+    }
+    return tot;
+  }
+  
+  // AJOUTER ARTICLES //
+  function ajouter() {
+      
+        let list= document.getElementById('list');
+
+        let choix= list.options[list.selectedIndex];
+        panier.push(choix)
+        let ligne= document.createElement("tr");
+        ajouterCase(ligne,choix.innerText); 
+        ajouterCase(ligne,choix.value);
+         
+        document.getElementById("pan").appendChild(ligne);
+        document.getElementById("tot").innerHTML= total();
+console.log(panier)
+  }
+    
+remplirCatalogue();
+
+
+
+// COMMANDER //
+
+function miam() {
+    alert("Thanks for your command ! Buon Appetito")
+}
+
+
+/*
+function commander() {
+    let basket = document.querySelector(".basket")
+    let commande = document.createElement("button")
+    commande.innerHTML = "commander"
+    commande.addEventListener("click", alert)
+        basket.appendChild(commande)
+    }
+*/
+
+
+function visible() {
+    let command = document.querySelector(".command")
+    command.style.visibility = "visible"
+}
+
+let add = document.querySelector(".add")
+
+add.addEventListener("click", visible)
+
+
+ 
+

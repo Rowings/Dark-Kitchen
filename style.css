@@ -211,3 +211,62 @@ article
         }
     }
     
+
+
+
+/* ********** CSS PANIER *********** */
+
+.basket  {
+    width: 140px;
+    position: relative;
+    margin: 0 auto; 
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 10px 10px black;
+}
+
+.add {
+    
+    padding: 5px;
+    margin: 5px 0;
+    color: white;
+    background-color: rgb(52, 52, 255);
+    border-radius: 10px;
+
+}
+
+#pan {
+margin: 0 auto;
+}
+
+#list {
+    color: white;
+   background-color: black;
+   
+   padding: 8px;
+   
+   
+
+}
+.command {
+    color: white;
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+th, td {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    margin:5px;
+}
+td {
+    color: rgb(0, 255, 0);
+}
+
+
+
