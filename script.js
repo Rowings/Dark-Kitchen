@@ -157,10 +157,10 @@ function displayMenu ()
     displayMenu();
 
 
-// JS PANIER 2.0//
+//////////// JS PANIER 2.0 /////////////
 
 
-function Produit(id, foodName, price) {
+/*function Produit(id, foodName, price) {
     this.id= id;
     this.price= price;
     this.foodName= foodName;
@@ -168,7 +168,7 @@ function Produit(id, foodName, price) {
       return this.foodName + " "+ price;
     }
 }
-  
+  */
   
  function remplirCatalogue() {
           let list= document.getElementById('list');
@@ -190,33 +190,50 @@ function Produit(id, foodName, price) {
         e.appendChild(document.createTextNode(txt));
         parent.appendChild(e);
       }
+      
 
-     
+   // TOTAL //  
  const panier = []
 
- function calculerTotal() {
+ function Total() {
     let tot= 0;
-    for (let p in panier) {
-        tot+= panier[p].price;
+    for (let i in panier) {
+        tot+= panier[i].price;
     }
     return tot;
   }
   
+  // AJOUTER ARTICLES //
   function ajouter() {
       
         let list= document.getElementById('list');
 
         let choix= list.options[list.selectedIndex];
-        
+        panier.push(choix)
         let ligne= document.createElement("tr");
         ajouterCase(ligne,choix.innerText); 
         ajouterCase(ligne,choix.value);
          
         document.getElementById("pan").appendChild(ligne);
-        document.getElementById("tot").innerHTML= calculerTotal();
-
+        document.getElementById("tot").innerHTML= Total();
+console.log(panier)
   }
     
 remplirCatalogue();
 
 
+
+// COMMANDER //
+function commander() {
+    let commande = document.createElement("button")
+    commande.innerHTML = "commander"
+    commande.addEventListener("click", function(){
+        alert("Thanks for your command !")
+
+        article.appendChild(commande)
+    })
+}
+
+let add = document.querySelector(".add")
+
+add.addEventListener("click", commander)
