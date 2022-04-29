@@ -52,6 +52,7 @@ text-align: center;
 padding: 20px;
 font-size: 20px;
 margin-top: 50px;
+border-style:groove;
 }
 
 li, a, button {
@@ -79,10 +80,12 @@ margin-left: -60px;
 }
 
 .type {
+    
     box-shadow: 0 10px 10px black;
     margin-top: 50px;
-    border: 10px solid white;
+    
     border-style: dotted;
+    
     border-left-color: black;
     border-top-color: black;
 }
@@ -126,7 +129,7 @@ animation: rotate 2.5s ease-in infinite;
 border-radius: 500px;
 box-shadow: 0 20px 20px black;
 
-display: none;
+
 }
 
 video:hover {
@@ -235,6 +238,7 @@ color: white;
 border: 2px solid rgb(255, 255, 255);
 border-radius: 20px;
 box-shadow: 0 10px 10px black;
+margin-top: 20px;
 }
 .add {
 padding: 5px;
@@ -265,4 +269,10 @@ th, td {
 }
 td {
     color: rgb(0, 255, 0);
+}
+
+.basketPanier {
+    width: 20%;
+   margin-left: 47px;
+   margin-bottom: 5px
 }
