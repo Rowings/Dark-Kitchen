@@ -40,6 +40,22 @@
             <button class="btn" onclick="filterSelection('dinner')"> Dinner</button>
             <button class="btn" onclick="filterSelection('drink')"> Drink</button>
           </div>
+
+
+          <section class="basket">
+            <select id="list" multiple>
+            </select>
+            
+            <button class="add" onclick="ajouter();">Ajouter</button>
+            
+            <table id="pan">
+              <tr><th>Plat</th><th>Prix</th></tr>
+            </table>
+            
+            <p>Total :<span id="tot"></span></p>
+            <button class="command" style="visibility: hidden;" onclick="miam();">Commander</button>
+        </section>
+        
     <main>
     
 

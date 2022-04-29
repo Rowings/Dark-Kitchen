@@ -160,52 +160,124 @@ function displayMenu ()
 
     displayMenu();
 
+    
 
-    filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("type");
-  if (c == "menu") c = "";
+    function remplirCatalogue() {
+        let list= document.getElementById('list');
+      for (let food of menu) {
+          let e= document.createElement("option");
+          e.value=food.price;
+            let txt= document.createTextNode(food.foodName);
+            e.appendChild(txt);
+          list.appendChild(e);
+          
+      }
 
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
-}
 
-// Show filtered elements
-function toutElement(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
+  
+
+  function ajouterCase(parent, txt) {
+      var e = document.createElement("td");
+      e.appendChild(document.createTextNode(txt));
+      parent.appendChild(e);
     }
+    
+    
+
+ // TOTAL //  
+const panier = []
+
+
+function total() {
+  let tot= 0;
+  for (let i in panier) {
+      tot+= panier[i].price;
   }
+  return tot;
 }
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
+// AJOUTER ARTICLES //
+function ajouter() {
+    
+      let list= document.getElementById('list');
+
+      let choix= list.options[list.selectedIndex];
+      panier.push(choix)
+      let ligne= document.createElement("tr");
+      ajouterCase(ligne,choix.innerText); 
+      ajouterCase(ligne,choix.value);
+       
+      document.getElementById("pan").appendChild(ligne);
+      document.getElementById("tot").innerHTML= total();
+console.log(panier)
+}
+  
+function remplirCatalogue() {
+    let list= document.getElementById('list');
+  for (let food of menu) {
+      let e= document.createElement("option");
+      e.value=food.price;
+        let txt= document.createTextNode(food.foodName);
+        e.appendChild(txt);
+      list.appendChild(e);
+      
   }
-  element.className = arr1.join(" ");
+
 }
 
-// Add active class to the current control button (highlight it)
 
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+
+function ajouterCase(parent, txt) {
+  var e = document.createElement("td");
+  e.appendChild(document.createTextNode(txt));
+  parent.appendChild(e);
 }
+
+
+// AJOUTER ARTICLES //
+function ajouter() {
+
+  let list= document.getElementById('list');
+
+  let choix= list.options[list.selectedIndex];
+  panier.push(choix)
+  let ligne= document.createElement("tr");
+  ajouterCase(ligne,choix.innerText); 
+  ajouterCase(ligne,choix.value);
+   
+  document.getElementById("pan").appendChild(ligne);
+  document.getElementById("tot").innerHTML= total();
+console.log(panier)
+}
+
+remplirCatalogue();
+
+
+
+// COMMANDER //
+
+function miam() {
+alert("Thanks for your command ! Buon Appetito")
+}
+
+
+/*
+function commander() {
+let basket = document.querySelector(".basket")
+let commande = document.createElement("button")
+commande.innerHTML = "commander"
+commande.addEventListener("click", alert)
+  basket.appendChild(commande)
+}
+*/
+
+
+function visible() {
+let command = document.querySelector(".command")
+command.style.visibility = "visible"
+}
+
+let add = document.querySelector(".add")
+
+add.addEventListener("click", visible)
